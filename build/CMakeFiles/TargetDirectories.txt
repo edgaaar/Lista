@@ -1,0 +1,3 @@
+/home/edgar/Programas/Lista/build/CMakeFiles/edit_cache.dir
+/home/edgar/Programas/Lista/build/CMakeFiles/rebuild_cache.dir
+/home/edgar/Programas/Lista/build/CMakeFiles/lista.dir
