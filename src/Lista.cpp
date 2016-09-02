@@ -139,9 +139,20 @@ int Lista::RemoveRef(int Ref)
 		aux2->setSig(aux->getSig());
 		
 		return Ref;
-		
+
 	}else{
 		std::cout<<"La lista está vacía"<<std::endl;
 		return (int)NULL;
+	}
+}
+
+Nodo* Lista::BuscarElemento(int Dato)
+{
+	if(!ListaVacia())
+	{
+		Nodo* aux = H;
+		while(aux->getDato()!=Dato && aux != NULL)
+			aux = aux->getSig();
+		return aux;
 	}
 }
