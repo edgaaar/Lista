@@ -11,10 +11,6 @@ Lista::Lista(int Dato)
 	Nodo * aux= new Nodo(Dato);
 	this->H=aux;
 	this->T=aux;
-	/*std::cout<<H->getDato()<<std::endl;
-	std::cout<<H->getSig()<<std::endl;
-	std::cout<<T->getDato()<<std::endl;
-	std::cout<<T->getSig()<<std::endl;*/
 }
 
 bool Lista::ListaVacia()
@@ -32,10 +28,6 @@ void Lista::AddInicio(int Dato)
 		this->T= aux;
 	}
 	this->H= aux;
-/*	std::cout<<H->getDato()<<std::endl;
-	std::cout<<H->getSig()<<std::endl;
-	std::cout<<T->getDato()<<std::endl;
-	std::cout<<T->getSig()<<std::endl;*/
 }
 
 void Lista::Show()
@@ -155,4 +147,10 @@ Nodo* Lista::BuscarElemento(int Dato)
 			aux = aux->getSig();
 		return aux;
 	}
+}
+
+void Lista::VaciarLista(void)
+{
+	H = NULL;
+	T = H;
 }

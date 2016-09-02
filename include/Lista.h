@@ -14,7 +14,7 @@ public:
 	int RemoveInicio();
 	int RemoveFinal();
 	int RemoveRef(int Ref);
-	//int VaciarLista();
+	void VaciarLista();
 	Nodo* BuscarElemento(int Dato);
 	void Show();
 };
