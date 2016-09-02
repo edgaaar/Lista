@@ -128,21 +128,18 @@ int Lista::RemoveRef(int Ref)
 {
 	if(!ListaVacia())
 	{
-		if(H!=T)
+	
+		Nodo* aux = H;
+		Nodo* aux2 = NULL; 
+		while(aux->getDato()!= Ref || aux != NULL)
 		{
-			Nodo* aux = H;
-			Nodo* aux2 = NULL; 
-			while(aux->getDato()!= Ref || aux != NULL)
-			{
-				aux2 = aux;
-				aux = aux->getSig();
-			}
-			//AQUÍ ME QUEDÉ
-		}else{
-				H = NULL;
-				T = NULL;
+			aux2 = aux;
+			aux = aux->getSig();
 		}
+		aux2->setSig(aux->getSig());
+		
 		return Ref;
+		
 	}else{
 		std::cout<<"La lista está vacía"<<std::endl;
 		return (int)NULL;
